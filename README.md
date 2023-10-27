@@ -34,3 +34,5 @@ _Note:_ For Java Card 3.0.4 you may need exactly JDK 8. This is because more fre
 - Connect your card to PC (it could be contact or contactless card) using reader. Run com.mycard.AppletInstaller main function. It reads the card, detects if applet is installed or not. If it installed already, you are proposed an option to delete it (together with related package).
 
 - After applet istallation you may try unit tests demonstarting basic scenarious to work with the applet.
+
+_Note:_ _CardInstallerAndRunner_ folder already contains _mycard.cap_. It was built using JDK 8 and JCDK 3.0.4. 

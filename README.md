@@ -27,7 +27,7 @@ You can try install applet onto simulator.
 
 If you have card supporting Java Card 3.0.4 (like we do) or older, you can install applet onto it.
 
-_Note:_ For Java Card 3.0.4 you may need exactly JDK 8 since more fresh JDK may cause troubles during applet compilation. To install applet onto card we need to compile with target = 1.5, that is not supported for older JDK. Older target may cause fail during applet istallation onto card.
+_Note:_ For Java Card 3.0.4 you may need exactly JDK 8. This is because more fresh JDK may cause troubles during applet compilation/installation. To install applet onto card we need to compile with target = 1.5, that is not supported for older JDK. Older target may cause fail during applet istallation onto card.
 
 - In _CardInstallerAndRunner_ there is an implementation of secure applets installation flow based on Global Platform 2.1.1 specification. You need card supporting SCP02. Other SCP versions are not supported yet.
   

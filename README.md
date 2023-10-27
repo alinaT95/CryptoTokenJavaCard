@@ -11,7 +11,7 @@ This repository contains exemplary applet providing standard functionality of cr
 
 # Applet building
 
-- Run command _mvn install_ in the root of _CardTask_ project. It compiles sources and generates _.cap_ file. The cap file is copied into the root of _CardInstallerAndRunner_.
+- Run command _mvn install_ in the root of _CardTask_ project. It compiles sources and generates _.cap_ file. The cap file is copied into the root of _CardInstallerAndRunner_ for further usage. So be sure that both subprojects _CardTask_ and _CardInstallerAndRunner_ are at the same level.
 
 _Note:_ _CardTask_ project is configured exactly for Java Card 3.0.4. So if you want use more fresh JCDK, you must fix pom.xml and rebuild.
 

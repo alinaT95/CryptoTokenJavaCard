@@ -31,6 +31,6 @@ _Note:_ For Java Card 3.0.4 you may need exactly JDK 8. This is because more fre
 
 - In _CardInstallerAndRunner_ there is an implementation of secure applets installation flow based on Global Platform 2.1.1 specification. You need card supporting SCP02. Other SCP versions are not supported yet.
   
-- Connect your card to PC (it could be contact or contacless card) using reader. Run com.mycard.AppletInstaller main function. It reads the card, detects if applet is installed or not. If it instakked already you have an option to delete it (together with related package).
+- Connect your card to PC (it could be contact or contactless card) using reader. Run com.mycard.AppletInstaller main function. It reads the card, detects if applet is installed or not. If it instakked already you have an option to delete it (together with related package).
 
 - After applet istallation you may try unit tests demonstarting basic scenarious to work with the card.

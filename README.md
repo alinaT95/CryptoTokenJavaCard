@@ -18,11 +18,17 @@ This repository contains exemplary applet providing standard functionality of cr
 You can try install applet onto simulator.
 
 - In separate cmd instance run simulator by running _$JC_HOME$/bin/cref.bat_.
-- Use _$JC_HOME$/bin/scripgen.bat_ to generate script for applet installation onto simulator (based on cap file).
+- Use _$JC_HOME$/bin/scriptgen.bat_ to generate script for applet installation onto simulator (based on cap file).
 - Run the script in separate cmd instance using _$JC_HOME$/bin/apdutool.bat_.
 
 # Applet installation onto real card
 
-You can try to install
+If you have card supporting Java Card 3.0.4 (like we do) or older, you can install applet onto it.
 
-_Note:_ Older versions of JDK may cause troubles during applet compilation since we need target = 1.5.
+_Note:_ For Java Card 3.0.4 you may need exactly JDK 8 since older JDK may cause troubles during applet compilation. To install applet onto card we need to compile with target = 1.5, that is not supported for older JDK. Older target may cause fail during applet istallation onto card.
+
+- In _CardInstallerAndRunner_ there is an implementation of secure applets installation flow based on Global Platform 2.1.1 specification. You need card supporting SCP02. Other SCP versions are not supported yet.
+  
+- Connect your card to PC (it could be contact or contacless card) using reader. Run com.mycard.AppletInstaller main function. It reads the card, detects if applet is installed or not. If it instakked already you have an option to delete it (together with related package).
+
+- After applet istallation you may try unit tests demonstarting basic scenarious to work with the card.

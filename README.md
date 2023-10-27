@@ -7,11 +7,13 @@ This repository contains exemplary applet providing standard functionality of cr
 - Install Java Development Kit (JDK) 8.  Don't forget to set JAVA_HOME enviromet variable.
 - Download Java Card Development Kit (JCDK). You can use JCDK 3.0.4 placed in _tools_ subfolder. Set JC_HOME enviroment variable pointing to your JCDK folder.
 - Install Maven (or use Intellij Idea).
-- You may need smart card supporting JavaCard 3.0.4+ and Global Platform 2.1.1, SCP02.
+- You need smart card supporting JavaCard 3.0.4+ and Global Platform 2.1.1, SCP02.
 
 # Applet building
 
 - Run command _mvn install_ in the root of _CardTask_ project. It compiles sources and genreates _.cap_ file. The cap file is copied into the root of _CardInstallerAndRunner_.
+
+_Note:_ _CardTask_ project is configured exactly for Java Card 3.0.4. So if you want use more fresh JCDK, you must fix pom.xml and rebuild.
 
 # Applet installation onto simulator
 
@@ -25,7 +27,7 @@ You can try install applet onto simulator.
 
 If you have card supporting Java Card 3.0.4 (like we do) or older, you can install applet onto it.
 
-_Note:_ For Java Card 3.0.4 you may need exactly JDK 8 since older JDK may cause troubles during applet compilation. To install applet onto card we need to compile with target = 1.5, that is not supported for older JDK. Older target may cause fail during applet istallation onto card.
+_Note:_ For Java Card 3.0.4 you may need exactly JDK 8 since more fresh JDK may cause troubles during applet compilation. To install applet onto card we need to compile with target = 1.5, that is not supported for older JDK. Older target may cause fail during applet istallation onto card.
 
 - In _CardInstallerAndRunner_ there is an implementation of secure applets installation flow based on Global Platform 2.1.1 specification. You need card supporting SCP02. Other SCP versions are not supported yet.
   
